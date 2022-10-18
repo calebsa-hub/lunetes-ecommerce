@@ -83,7 +83,7 @@
                 <div
                     class="flex items-center justify-between border-b-2 border-gray-500 py-4 md:justify-start md:space-x-10">
                     <div class="flex justify-start lg:w-0 lg:flex-1">
-                        <a href="#">
+                        <a href="">
                             <span class="sr-only">Café&Telescopios</span>
                             <img class="h-16 w-16 sm:h-16"
                                 src="https://cdn-icons-png.flaticon.com/512/1086/1086070.png?w=740&t=st=1665798431~exp=1665799031~hmac=47cc834f9e18625bb279d5eecdc24325d555e303ed78be79d01f39ef3bd95508"
@@ -138,13 +138,15 @@
                             <!-- Profile dropdown -->
                             <div class="ml-3">
                                 <div class="absolute right-10">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="white" class="w-6 w-6">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M15.75 6a3.75 3.75 0
-                                  11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0
-                                  0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                                    </svg>
+                                    <a href="{{ route('login') }}">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="white" class="w-6 w-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501
+                                                20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676
+                                                0-5.216-.584-7.499-1.632z" />
+                                        </svg>
+                                    </a>
                                 </div>
                                 <!--
                             Dropdown menu, show/hide based on menu state.
@@ -235,7 +237,7 @@
                                     class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
                                     aria-current="page">Iniciantes</a>
 
-                                <a href="#"
+                                <a href="#refractors-section" target="_self"
                                     class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2
                     rounded-md text-sm font-medium">Refratores</a>
 
@@ -316,9 +318,146 @@
             <button id="sButton2" onclick="sliderButton2() " class="bg-purple-400 rounded-full w-4 p-2"></button>
         </div>
 
+        <h1 class="py-10">Refratores</h1>
+        <section id="refractors-section" class="flex flex-rol">
+            <div class="max-w-sm rounded overflow-hidden shadow-lg">
+                <img class="w-full"
+                    src="https://www.bhphotovideo.com/images/images2500x2500/sky_watcher_s10105_startravel_120mm_f_5_refractor_1466511.jpg"
+                    alt="Sunset in the mountains">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+                    <p class="text-gray-700 text-base">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et
+                        perferendis eaque, exercitationem praesentium nihil.
+                    </p>
+                </div>
+                <div class="px-6 pt-4 pb-2">
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+                </div>
+            </div>
+
+            <div class="max-w-sm rounded overflow-hidden shadow-lg">
+                <img class="w-full"
+                    src="https://www.firstlightoptics.com/user/products/large/skywatcher_evostar_90_az3_telescope_1.jpg"
+                    alt="Sunset in the mountains">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+                    <p class="text-gray-700 text-base">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et
+                        perferendis eaque, exercitationem praesentium nihil.
+                    </p>
+                </div>
+                <div class="px-6 pt-4 pb-2">
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+                </div>
+            </div>
+
+            <div class="max-w-sm rounded overflow-hidden shadow-lg">
+                <img class="w-full"
+                    src="https://binocentral.com.au/pub/media/catalog/product/cache/8fb807837831c0d3d0060efd3531825a/s/k/skywatcher-sw707-refractor-telescope_2.jpg"
+                    alt="Sunset in the mountains">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+                    <p class="text-gray-700 text-base">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et
+                        perferendis eaque, exercitationem praesentium nihil.
+                    </p>
+                </div>
+                <div class="px-6 pt-4 pb-2">
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+                </div>
+            </div>
+
+        </section>
+
+        <h1 class="py-10">Refletores</h1>
+        <section class="flex flex-rol">
+            <div class="max-w-sm rounded overflow-hidden shadow-lg">
+                <img class="w-full"
+                    src="https://www.bhphotovideo.com/images/images2500x2500/sky_watcher_s10105_startravel_120mm_f_5_refractor_1466511.jpg"
+                    alt="Sunset in the mountains">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+                    <p class="text-gray-700 text-base">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et
+                        perferendis eaque, exercitationem praesentium nihil.
+                    </p>
+                </div>
+                <div class="px-6 pt-4 pb-2">
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+                </div>
+            </div>
+
+            <div class="max-w-sm rounded overflow-hidden shadow-lg">
+                <img class="w-full"
+                    src="https://www.firstlightoptics.com/user/products/large/skywatcher_evostar_90_az3_telescope_1.jpg"
+                    alt="Sunset in the mountains">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+                    <p class="text-gray-700 text-base">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et
+                        perferendis eaque, exercitationem praesentium nihil.
+                    </p>
+                </div>
+                <div class="px-6 pt-4 pb-2">
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+                </div>
+            </div>
+
+            <div class="max-w-sm rounded overflow-hidden shadow-lg">
+                <img class="w-full"
+                    src="https://binocentral.com.au/pub/media/catalog/product/cache/8fb807837831c0d3d0060efd3531825a/s/k/skywatcher-sw707-refractor-telescope_2.jpg"
+                    alt="Sunset in the mountains">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+                    <p class="text-gray-700 text-base">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et
+                        perferendis eaque, exercitationem praesentium nihil.
+                    </p>
+                </div>
+                <div class="px-6 pt-4 pb-2">
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+                </div>
+            </div>
+        </section>
+        <h1>Acessórios</h1>
+        <section></section>
+
 
         {{-- </section> --}}
     </div>
+
+
 
     <footer class="text-center lg:text-left bg-gray-100 text-gray-600">
         <div class="flex justify-center items-center lg:justify-between p-6 border-b border-gray-300">

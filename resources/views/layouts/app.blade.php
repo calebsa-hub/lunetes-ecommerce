@@ -99,6 +99,10 @@
     </header>
 
     <div class="container mx-auto px-4 py-8">
+        <form action="{{ route('logout') }}" method="POST">
+            @csrf
+            <button class="bg-red-400 p-1 rounded-md" type="submit">Logout</button>
+        </form>
         @yield('content')
     </div>
 </body>
