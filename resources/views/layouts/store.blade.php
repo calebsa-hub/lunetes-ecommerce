@@ -302,12 +302,12 @@
                 <div class="bg-cover bg-top  h-auto text-white py-24 px-10 object-fill"
                     style="background-image: url(https://cdn.shopify.com/s/files/1/1935/4371/collections/Telescopes_Category_page_1200x310_1080caa7-04b2-4560-b2fa-ec2f88cb9619_2048x.jpg?v=1550877609)">
 
-                    <p class="font-bold text-sm uppercase">Services</p>
+                    {{-- <p class="font-bold text-sm uppercase">Services</p>
                     <p class="text-3xl font-bold">Hello world</p>
-                    <p class="text-2xl mb-10 leading-none">Carousel with TailwindCSS and jQuery</p>
-                    <a href="#"
+                    <p class="text-2xl mb-10 leading-none">Carousel with TailwindCSS and jQuery</p> --}}
+                    {{-- <a href="#"
                         class="bg-purple-800 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Contact
-                        us</a>
+                        us</a> --}}
 
                 </div> <!-- container -->
                 <br>
