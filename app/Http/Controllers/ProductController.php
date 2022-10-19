@@ -22,6 +22,13 @@ class ProductController extends Controller
         return view('products.index', compact('products'));
     }
 
+    public function storeIndex(Request $request)
+    {
+        $products = $this->model->getProducts($request->search ?? '');
+
+        return view('layouts.store', compact('products'));
+    }
+
     public function show($id)
     {
         if (!$product = $this->model->find($id)) {

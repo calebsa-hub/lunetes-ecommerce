@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::middleware(['auth'])->group(function () {
-    Route::delete('/products/{id}', [ProductControllerController::class, 'delete'])->name('products.delete');
+    Route::delete('/products/{id}', [ProductController::class, 'delete'])->name('products.delete');
     Route::put('/products/{id}', [ProductController::class, 'update'])->name('products.update');
     Route::get('/products/{id}/edit', [ProductController::class, 'edit'])->name('products.edit');
     Route::get('/products', [ProductController::class, 'index'])->name('products.index');
@@ -16,8 +16,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/products/{id}', [ProductController::class, 'show'])->name('products.show');
 });
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [ProductController::class, 'storeIndex'])->name('products.storeIndex');
+
+// Route::get('/', function () {
+//     return view('home');
+// });
 
 require __DIR__ . '/auth.php';
