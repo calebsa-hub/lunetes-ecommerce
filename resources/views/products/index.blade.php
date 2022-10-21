@@ -15,8 +15,12 @@
 <table class="table-auto rounded-md w-full bg-blue-50">
     <thead class="table-header-group bg-blue-100">
         <tr class="table-row">
+            <th class="table-cell text-left">Imagem</th>
             <th class="table-cell text-left">Nome</th>
             <th class="table-cell text-left">Descrição</th>
+            <th class="table-cell text-left">Categoria</th>
+            <th class="table-cell text-left">Disponível</th>
+            <th class="table-cell text-left">Quant. Estoque</th>
             <th class="table-cell text-left">Preço</th>
             <th class="table-cell text-left">Ação</th>
         </tr>
@@ -24,11 +28,27 @@
     <tbody class="table-row-group">
         @foreach ($products as $product)
             <tr class="table-row">
+                <td>
+                    @if ($product->image)
+                        <img src="{{ url("storage/{$product->image}") }}" class="object-cover w-20">
+                    @else
+                        <img src="{{ url("images/favicon.ico") }}" class="object-cover w-20">
+                    @endif
+                </td>
                 <td class="table-cell">
                     {{ $product->name }}
                 </td>
                 <td class="truncate text-sm max-w-prose">
                     {{ $product->description }}
+                </td>
+                <td>
+
+                </td>
+                <td>
+                    {{ $product->available }}
+                </td>
+                <td>
+
                 </td>
                 <td>
                     {{ $product->price }}

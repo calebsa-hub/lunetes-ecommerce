@@ -350,7 +350,7 @@
             </span>
         </a>
 
-        <div class="min-h-screen bg-gray-100 p-3 relative">
+        {{-- <div class="min-h-screen bg-gray-100 p-3 relative">
             @foreach ($products as $product)
                 <div class="w-96 mx-auto" style="scroll-snap-type: x mandatory;">
                     <!-- first -->
@@ -407,9 +407,9 @@
 
                 </div>
             @endforeach
-        </div>
+        </div> --}}
 
-        {{-- <section class="flex flex-rol">
+        <section class="flex flex-rol">
             @foreach ($products as $product)
                 <div class="max-w-sm rounded overflow-hidden shadow-lg">
                     <img class="w-full"
@@ -433,7 +433,8 @@
                     </div>
                 </div>
             @endforeach
-        </section> --}}
+
+        </section>
 
         <a href="#" id="reflectors-section">
             <span class="py-10 font-bold text-xl flex flex-rol">Refletores

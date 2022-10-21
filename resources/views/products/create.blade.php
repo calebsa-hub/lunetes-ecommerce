@@ -7,7 +7,7 @@
 
 @include('includes.validations-form')
 
-<form action="{{ route('products.store') }}" method="POST">
+<form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
     @include('products._partials.form')
 </form>
 @endsection

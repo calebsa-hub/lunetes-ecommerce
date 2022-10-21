@@ -56,6 +56,10 @@ class ProductController extends Controller
     {
         $data = $request->all();
 
+        if ($request->image) {
+            $data['image'] = $request->image->store('products');
+        }
+
         $this->model->create($data);
 
         return redirect()->route('products.index');

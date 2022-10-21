@@ -7,7 +7,7 @@
 
 @include('includes.validations-form')
 
-<form action="{{ route('products.update', $product->id) }}" method="POST">
+<form action="{{ route('products.update', $product->id) }}" method="POST" enctype="multipart/form-data">
     @method('PUT')
     @include('products._partials.form')
 </form>
