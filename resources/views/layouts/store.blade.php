@@ -37,6 +37,7 @@
                         break;
                     }
 
+
                 }
             }, 8000);
 
@@ -46,6 +47,8 @@
             clearInterval(xx);
             setTimeout(loopSlider(), time);
         }
+
+
 
         function sliderButton1() {
 
@@ -71,6 +74,7 @@
         $(window).ready(function() {
             $("#slider-2").hide();
             $("#sButton1").addClass("bg-purple-800");
+
             loopSlider();
         });
     </script>
@@ -346,14 +350,73 @@
             </span>
         </a>
 
-        <section class="flex flex-rol">
+        <div class="min-h-screen bg-gray-100 p-3 relative">
+            @foreach ($products as $product)
+                <div class="w-96 mx-auto" style="scroll-snap-type: x mandatory;">
+                    <!-- first -->
+
+                    <div class="">
+                        <input class="sr-only peer" type="radio" name="carousel" id="carousel-1" checked />
+                        <!-- content #1 -->
+                        <div
+                            class="w-96 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-lg transition-all duration-300 opacity-0 peer-checked:opacity-100 peer-checked:z-10 z-0">
+                            <div class="max-w-sm rounded overflow-hidden shadow-lg">
+                                <img class="w-full"
+                                    src="https://www.bhphotovideo.com/images/images2500x2500/sky_watcher_s10105_startravel_120mm_f_5_refractor_1466511.jpg"
+                                    alt="Sunset in the mountains">
+                                <div class="px-6 py-4">
+                                    <div class="font-bold text-xl mb-2">{{ $product->name }}</div>
+                                    <p class="text-gray-700 truncate text-sm max-w-prose">
+                                        {{ $product->description }}
+                                    </p>
+                                </div>
+                                <div class="px-6 pb-2 flex-col">
+                                    <span
+                                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                                        R$ {{ $product->price }}
+                                    </span>
+                                    <button class="bg-green-400 rounded-md p-1">Comprar</button>
+                                    <button class="rounded-md p-1">
+                                        <p class="text-cyan-600 hover:underline">Add</p>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- controls -->
+                            <div class="absolute top-1/2 w-full flex justify-between z-20">
+                                <label for="carousel-3"
+                                    class="inline-block text-red-600 cursor-pointer -translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </label>
+                                <label for="carousel-2"
+                                    class="inline-block text-red-600 cursor-pointer translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            @endforeach
+        </div>
+
+        {{-- <section class="flex flex-rol">
             @foreach ($products as $product)
                 <div class="max-w-sm rounded overflow-hidden shadow-lg">
                     <img class="w-full"
                         src="https://www.bhphotovideo.com/images/images2500x2500/sky_watcher_s10105_startravel_120mm_f_5_refractor_1466511.jpg"
                         alt="Sunset in the mountains">
                     <div class="px-6 py-4">
-                        <div class="font-bold text-xl mb-2">{{$product->name}}</div>
+                        <div class="font-bold text-xl mb-2">{{ $product->name }}</div>
                         <p class="text-gray-700 truncate text-sm max-w-prose">
                             {{ $product->description }}
                         </p>
@@ -365,12 +428,12 @@
                         </span>
                         <button class="bg-green-400 rounded-md p-1">Comprar</button>
                         <button class="rounded-md p-1">
-                            <p class="text-cyan-600">Add</p>
+                            <p class="text-cyan-600 hover:underline">Add</p>
                         </button>
                     </div>
                 </div>
             @endforeach
-        </section>
+        </section> --}}
 
         <a href="#" id="reflectors-section">
             <span class="py-10 font-bold text-xl flex flex-rol">Refletores
@@ -388,7 +451,7 @@
                         src="https://www.bhphotovideo.com/images/images2500x2500/sky_watcher_s10105_startravel_120mm_f_5_refractor_1466511.jpg"
                         alt="Sunset in the mountains">
                     <div class="px-6 py-4">
-                        <div class="font-bold text-xl mb-2">{{$product->name}}</div>
+                        <div class="font-bold text-xl mb-2">{{ $product->name }}</div>
                         <p class="text-gray-700 truncate text-sm max-w-prose">
                             {{ $product->description }}
                         </p>
@@ -421,7 +484,7 @@
                         src="https://www.bhphotovideo.com/images/images2500x2500/sky_watcher_s10105_startravel_120mm_f_5_refractor_1466511.jpg"
                         alt="Sunset in the mountains">
                     <div class="px-6 py-4">
-                        <div class="font-bold text-xl mb-2">{{$product->name}}</div>
+                        <div class="font-bold text-xl mb-2">{{ $product->name }}</div>
                         <p class="text-gray-700 truncate text-sm max-w-prose">
                             {{ $product->description }}
                         </p>
